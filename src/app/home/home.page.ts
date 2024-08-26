@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { OnecomponentPage } from '../onecomponent/onecomponent.page';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,9 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private onepage: NavController) { }
+  OnepageComponent() {
+    this.onepage.navigateForward('/onecomponent')
 
+  }
 }
